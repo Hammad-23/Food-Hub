@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import Reactrouter from "./config/router"
+import Reactrouter from "./config/router";
 
 function App() {
   return (
