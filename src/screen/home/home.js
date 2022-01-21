@@ -1,16 +1,10 @@
 import React from "react";
 import "./home.css";
-import { Col, Row, Container } from "react-bootstrap";
-
-
+import Navbar from "../../components/Navbar/navbar";
 export default function Home() {
-  
-
   return (
     <>
-      <h1>Home Page</h1>
-      
-      
+      <Navbar />
     </>
   );
 }

@@ -1,0 +1,23 @@
+.slider-Row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+}
+.slider-Carousel {
+  height: 300px;
+  width: 100%;
+}
+.slider-Image {
+  height: 300px;
+}
+@media screen and (max-width: 600px) {
+  .slider-Carousel {
+    height: 190px;
+    width: 100%;
+  }
+  .slider-Image {
+    height: 190px;
+    width: 100%;
+  }
+}
