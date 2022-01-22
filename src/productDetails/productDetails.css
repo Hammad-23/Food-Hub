@@ -1,0 +1,242 @@
+.productBackground{
+    font-family: 'Times New Roman', Times, serif;
+}
+.productBox{
+    margin-top: 30px;
+    
+}
+
+.productImage>img{
+    cursor: pointer;
+    width:533px;
+    height:370px;
+
+    
+}
+
+@media only screen and (max-width:1200px) {
+   .productImage>img{
+       width: 523px;
+       height: 350px;
+    
+   }
+}
+@media only screen and (max-width:992px) {
+    .productImage>img{
+        width: 383px;
+        height: 270px;
+     
+    }
+ }
+ @media only screen and (max-width:768px) {
+    .productImage>img{
+        width: 503px;
+        height: 320px;
+     
+    }
+ }
+ @media only screen and (max-width:576px) {
+    .productImage>img{
+        width: 505px;
+        height: 290px;
+     
+    }
+ }
+ @media only screen and (max-width:280px) {
+    .productImage>img{
+        width: 245px;
+        height: 210px;
+     
+    }
+ }
+.links{
+    margin-right: 50px;
+    width: 100px;
+    height:50px;
+}
+  
+.productLinks>.links>a>.socialLinks{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.productText{
+    margin-top: 30px;
+    text-align: left;
+    margin-left: 25px;
+}
+.productHeading>p{
+    font-size:20px;
+}
+.productContinental>a{
+    color: #eb3b17;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+.productContinental>a:hover{
+    color:#eb3b17 ;
+}
+.productContinental>span{
+    text-transform: capitalize;
+    color: orangered;
+}
+.productPrice>p{
+    margin-top: 15px;
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.preOrderBtn{
+    background-image: linear-gradient(to right,#e8b984, #f04602);
+    margin: 5px;
+    color: #eee;
+    text-transform: capitalize;
+    border-radius: 15px;
+    width: 95px;
+    height: 30px;
+    border: none;
+}
+.productbtnCustomise{
+    font-size: 10px;
+    text-transform: capitalize;
+    margin-left: 25px;
+}
+.detailsAboutProduct{
+    text-align: left;
+
+}
+.detailsAboutText{
+    width: 95%;
+
+}
+.detailsAboutText>span{
+    color: #545352;
+}
+.productFoodImage{
+    margin-top: 10px;
+}
+.productFoodImage>p{
+    text-transform: uppercase;
+    margin-top: 1px;
+    color: #545352;
+}
+.productIngredients{
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+.productIngredients>p{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.productIngredientsText>span{
+    width: 95%;
+    color: #545352;
+    text-transform: capitalize;
+}
+.productNutritionList{
+    margin-top: 20px;
+}
+.productNutritionList>p{
+    font-size: 18px;
+    text-transform: uppercase;
+    
+
+}
+.productNutritionItem{
+    margin: 10px;
+}
+.productNutritionItem>span{
+    text-transform: capitalize;
+}
+.productCardsBox{
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+.cardsTextBox{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.productCardsBox>.cardsTextBox>.lineFisrt{
+    border: solid 1px #b3b3b3;
+    border-radius: 10px;
+    background-color:#b3b3b3;
+    width: 7%;
+    margin-left: 30px;
+
+}
+.productCardsBox>.cardsTextBox>.lineSecond{
+    border: solid 1px #b3b3b3;
+    border-radius: 10px;
+    background-color:#b3b3b3;
+    width: 7%;
+    margin-right: 30px;
+
+}
+.productCardsBox>.cardsTextBox>.cardsText{
+    margin-left: 25px;
+    margin-right: 25px;
+}
+.productCardsBox>.cardsTextBox>.cardsText>p{
+    font-size: 25px;
+    font-weight:400;
+    text-transform: uppercase;
+    margin-top: 6px;
+}
+ @media only screen and (max-width:576px) {
+    .productCardsBox>.cardsTextBox>.cardsText>p{
+        font-size: 13px;
+        font-weight: bold;
+    }
+}
+.ProductsCardsContainer{
+    margin-bottom: 40px;
+    text-align: left;
+    font-family: 'Times New Roman', Times, serif;
+}
+.cardsImage>img{
+    width: 220px;
+    height: 180px;
+    cursor: pointer;
+}
+.cardsItemName>span{
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #4a4a48;
+
+}
+.cardsItemContinental>span{
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: #b3b3b3;
+}
+.cardsItemPrice{
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: gray;
+    margin-top: 9px;
+}
+.cardsItemButton{
+    background-image: linear-gradient(to right,#e8b984, #f04602);
+    color: #eee;
+    text-transform: capitalize;
+    border-radius: 15px;
+    outline: none;
+    width: 70px;
+    height: 30px;
+    border: none;
+    margin-right: auto;
+    
+}
+.col1{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+}
