@@ -1,12 +1,16 @@
 import React from "react";
 import "./navbar.css";
 import { Row, Col, Container } from "react-bootstrap";
-import Silders from "../Slider/index";
 import { GoSearch } from "react-icons/go";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BiCart } from "react-icons/bi";
+import { useHistory } from "react-router-dom";
 
 export default function Navbar(props) {
+  var history = useHistory();
+  const login = ()=>{
+    history.push("/login")
+  } 
   return (
     <>
       <Row className="main-row">
@@ -36,7 +40,7 @@ export default function Navbar(props) {
               <p className="offer-Text">Offers</p>
             </div>
             <div className="user-Icon-Div">
-              <AiOutlineUserAdd size={25} />
+              <AiOutlineUserAdd onClick={login} size={25} />
             </div>
             <div className="cart-Div">
               <BiCart size={25} />
@@ -44,7 +48,6 @@ export default function Navbar(props) {
           </div>
         </Col>
       </Row>
-      <Silders />
     </>
   );
 }

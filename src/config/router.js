@@ -1,6 +1,8 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "../screen/home/home";
+import Login from "../screen/Login/login";
+import SignUp from "../screen/Signup/signUp";
 
 export default function App() {
   return (
@@ -11,6 +13,12 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route exact path="/login">
+            <Login />
+          </Route>
+          <Route exact path="/signup">
+            <SignUp />
           </Route>
         </Switch>
       </div>
