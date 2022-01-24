@@ -1,7 +1,7 @@
 import React from "react";
 import "./signUp.css";
 import { useHistory } from "react-router-dom";
-import Button from "../../components/Button/button";
+import Button from "../../components/customButton/button";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import Input from "../../components/Input/input";
