@@ -38,7 +38,6 @@ input {
   color: #e96b3b;
   transition: all.6s;
 }
-
 .icons-Main-Row {
   height: 60px;
   box-shadow: whitesmoke 5px 5px 5px 5px;
@@ -51,6 +50,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-right: 12px;
   width: 30%;
 }
 .search-Icon-Div {

@@ -8,9 +8,6 @@ import { useHistory } from "react-router-dom";
 
 export default function Navbar(props) {
   var history = useHistory();
-  const login = ()=>{
-    history.push("/login")
-  } 
   return (
     <>
       <Row className="main-row">
@@ -40,7 +37,12 @@ export default function Navbar(props) {
               <p className="offer-Text">Offers</p>
             </div>
             <div className="user-Icon-Div">
-              <AiOutlineUserAdd onClick={login} size={25} />
+              <AiOutlineUserAdd
+                onClick={() => {
+                  history.push("/login");
+                }}
+                size={25}
+              />
             </div>
             <div className="cart-Div">
               <BiCart size={25} />
