@@ -12,13 +12,6 @@ export default function Home() {
    <Row>
     <h1>Home Page</h1>
     </Row>
-
-    
-      
-      
-      
-      
-    
     </>
   );
 }
