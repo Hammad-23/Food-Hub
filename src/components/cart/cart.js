@@ -1,6 +1,5 @@
 import React from "react";
-import "../cart/cart.css";
-import Burger from "../asset/images/burger.jpg";
+import "./cart.css";
 import Button from "../customButton/button";
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -42,7 +41,7 @@ export default function Cart(props) {
                 </div>
               </Col>
               <Col>
-                <Button text={"add"} className="button" />
+                <Button Text={"add"} className="button" />
                 <p className="btnCustomise">Customisable</p>
               </Col>
             </Row>

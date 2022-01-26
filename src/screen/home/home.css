@@ -1,43 +1,77 @@
-.electric-Kitchens-Row {
-  background-color: wheat;
+p {
+  font-family: sans-serif;
 }
-.option-Col {
+#categorie-Main-Row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
-.option-Text {
-  text-decoration: none;
-  font-family: "DM Sans";
+.categorie-Text-Col {
+  text-align: left;
+}
+.categorie-Text {
   font-size: 18px;
-  cursor: pointer;
+  padding-top: 12px;
 }
-.option-Text:hover {
-  color: orange;
+.filters-Col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.adds-Imges {
-  width: 30%;
-  height: 150px;
-  margin-top: 32px;
+.veg-Button {
+  width: 20%;
+  border: 2px solid #62cd82;
+  background-color: transparent;
+  border-radius: 7px;
+  margin-right: 25px;
 }
-.adds-Imges-Two {
+.veg-Button:hover {
+  color: #62cd82;
+}
+.price-Text {
   width: 25%;
-  height: 150px;
-  margin-top: 32px;
+  border: 2px solid #ee825c;
+  background-color: transparent;
+  border-radius: 7px;
 }
-.adds-Col {
-  margin-bottom: 60px;
+.price-Text:hover {
+  color: #ee825c;
 }
-@media screen and (max-width: 600px) {
-  .option-Col {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .adds-Imges {
-    width: 100%;
-  }
-  .adds-Imges-Two {
-    width: 90%;
-  }
+.filter-Image {
+  height: 25px;
+  margin-left: 18px;
+}
+.filters-Text {
+  font-size: 15px;
+  padding-top: 15px;
+  color: #867684;
+  font-weight: 600;
+}
+.categorie-Line-Col {
+  border: 2px solid #ececef;
+}
+.categorie-List-Text {
+  text-align: left;
+  cursor: pointer;
+  color: #535151;
+  padding-top: 5%;
+  font-size: 18px;
+  text-transform: capitalize;
+  display: block;
+}
+.categorie-List-Text:hover {
+  color: orange;
+  transition: all.6s;
+  font-size: 20px;
+  transform: scale(1);
+}
+.all-Day-Break-Text-Col {
+  text-align: left;
+  height: 50px;
+  margin-left: 25px;
+}
+.all-Day-BreakFast-Text {
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
 }
