@@ -8,9 +8,16 @@ import Card from "../../components/cart/cart";
 import Burger from "../../asset/images/burger.jpg";
 import Button from "../../components/customButton/button";
 import Filter from "../../asset/images/filter.png";
+import Customnavbar from "../../components/CustomNavbar/customnavbar";
 
 export default function Home() {
   const cardData = [
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
     {
       source: Burger,
       text: "veg . continental",
@@ -45,6 +52,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
+      <Customnavbar />
       <Silder />
       <Container>
         <Row id="categorie-Main-Row">

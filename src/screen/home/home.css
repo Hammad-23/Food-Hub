@@ -60,7 +60,7 @@ p {
   display: block;
 }
 .categorie-List-Text:hover {
-  color: orange;
+  color: #e96b3b;
   transition: all.6s;
   font-size: 20px;
   transform: scale(1);
