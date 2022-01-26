@@ -1,0 +1,77 @@
+p,
+input {
+  font-family: sans-serif;
+}
+#search-Mein-Row {
+  background-color: #f7f7f7;
+  height: 550px;
+}
+#back-To-Menu-Main-Col {
+  display: flex;
+  justify-content: flex-end;
+  height: 60px;
+}
+#bac-To-Menu-Col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back-To-Menu-Text {
+  padding-top: 14px;
+  font-weight: 600;
+  color: #e96b3b;
+}
+#search-Icon-Input-Main-Col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+#search-Input-COL {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+#search-ICon {
+  padding-left: 10px;
+}
+#searchInput {
+  height: 65px;
+  width: 90%;
+  padding-left: 15px;
+  background: transparent;
+  outline: none;
+  color: #5e5e5e;
+  font-weight: 600;
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+}
+#clear-Text {
+  padding-top: 10px;
+  font-weight: 600;
+  color: #e96b3b;
+}
+#Top-Categorie-Lin-Main-Col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+}
+#top-Categories-Col {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 27px;
+}
+#top-Categories-Text {
+  font-size: 18px;
+  padding-top: 16px;
+  font-weight: 500;
+}
+#To-Categorie-Line-Col {
+  height: 0;
+  border: 1px solid #eaeeee;
+}

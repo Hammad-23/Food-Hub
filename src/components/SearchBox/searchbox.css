@@ -1,0 +1,21 @@
+.blur-Image-Row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.blur-Image {
+  background-image: url("../../asset/images/blurImag.png");
+  background-repeat: no-repeat;
+  height: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkin-Burger {
+  width: 35%;
+}
+.blur-Text {
+  color: white;
+  font-weight: 600;
+}
