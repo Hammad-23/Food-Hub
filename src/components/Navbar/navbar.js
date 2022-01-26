@@ -5,6 +5,7 @@ import { GoSearch } from "react-icons/go";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BiCart } from "react-icons/bi";
 import { useHistory } from "react-router-dom";
+import Colors from '../../utils/appColor';
 
 export default function Navbar(props) {
   var history = useHistory();

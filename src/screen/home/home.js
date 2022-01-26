@@ -102,11 +102,6 @@ export default function Home() {
             <p className="categorie-List-Text">accompaniments</p>
           </Col>
 
-<<<<<<< HEAD
-   <Row>
-    <h1>Home Page</h1>
-    </Row>
-=======
           <Col>
             <Row>
               {cardData.map((item) => {
@@ -123,7 +118,6 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
->>>>>>> a6e70df26444733438564a161f30f28a925b8d55
     </>
   );
 }

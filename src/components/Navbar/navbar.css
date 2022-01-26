@@ -1,3 +1,4 @@
+
 p,
 input {
   font-family: sans-serif;
@@ -35,7 +36,7 @@ input {
   color: #5f5f5f;
 }
 .download-App-Text:hover {
-  color: #e96b3b;
+  color:  #e96b3b;
   transition: all.6s;
 }
 .icons-Main-Row {
