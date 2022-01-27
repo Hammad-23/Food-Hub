@@ -1,0 +1,77 @@
+p {
+  font-family: sans-serif;
+}
+#categorie-Main-Row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.categorie-Text-Col {
+  text-align: left;
+}
+.categorie-Text {
+  font-size: 18px;
+  padding-top: 12px;
+}
+.filters-Col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.veg-Button {
+  width: 20%;
+  border: 2px solid #62cd82;
+  background-color: transparent;
+  border-radius: 7px;
+  margin-right: 25px;
+}
+.veg-Button:hover {
+  color: #62cd82;
+}
+.price-Text {
+  width: 25%;
+  border: 2px solid #ee825c;
+  background-color: transparent;
+  border-radius: 7px;
+}
+.price-Text:hover {
+  color: #ee825c;
+}
+.filter-Image {
+  height: 25px;
+  margin-left: 18px;
+}
+.filters-Text {
+  font-size: 15px;
+  padding-top: 15px;
+  color: #867684;
+  font-weight: 600;
+}
+.categorie-Line-Col {
+  border: 2px solid #ececef;
+}
+.categorie-List-Text {
+  text-align: left;
+  cursor: pointer;
+  color: #535151;
+  padding-top: 5%;
+  font-size: 18px;
+  text-transform: capitalize;
+  display: block;
+}
+.categorie-List-Text:hover {
+  color: #e96b3b;
+  transition: all.6s;
+  font-size: 20px;
+  transform: scale(1);
+}
+.all-Day-Break-Text-Col {
+  text-align: left;
+  height: 50px;
+  margin-left: 25px;
+}
+.all-Day-BreakFast-Text {
+  font-size: 25px;
+  font-weight: 500;
+  text-transform: capitalize;
+}

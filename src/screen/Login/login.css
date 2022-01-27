@@ -1,0 +1,124 @@
+p,
+button,
+span {
+  font-family: sans-serif;
+}
+.login-Main-Row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 550px;
+}
+.login-Main-Col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-Card-Main-Div {
+  background-color: white;
+  box-shadow: whitesmoke 5px 5px 5px 5px;
+  height: 370px;
+  width: 38%;
+}
+.button-Main-Div {
+  display: flex;
+  padding-top: 15px;
+}
+.facebook-Button-Div {
+  width: 48%;
+}
+.face-Btn {
+  background-color: #4f73bb;
+  width: 80%;
+  height: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.google-icon-Div {
+  width: 7%;
+  border: 2px solid #678ad4;
+  border-right: none;
+  height: 35px;
+}
+.login-Google-Button {
+  background-color: #3367d6;
+  width: 40%;
+  height: 35px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  color: white;
+}
+.or-Text-Main-Div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 18px;
+}
+.line-Container {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.line-Div {
+  border: solid 1px #ececef;
+  width: 27%;
+}
+.login-Input {
+  padding-left: 10px;
+  border: 2px solid #e7e9e9;
+  outline: none;
+  color: #c2b4bb;
+  width: 90%;
+  height: 48px;
+}
+.login-Input:hover {
+  border: 2px solid #fbb100;
+}
+.send-Button {
+  padding-top: 15px;
+  padding-bottom: 25px;
+}
+.login-Button {
+  width: 90%;
+  height: 48px;
+  background-image: linear-gradient(to right, #f38847, #ea622d);
+  color: white;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.login-Line-DIV {
+  display: flex;
+  justify-content: center;
+}
+.line {
+  border: solid 1px #ececef;
+  width: 90%;
+}
+.dont-Have-Account-Text {
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.dont-Have-Text {
+  color: #bcbcbc;
+}
+.sign-Up-Text {
+  color: #e85928;
+}
+
+@media screen and (max-width: 600px) {
+  .login-Card-Main-Div {
+    width: 100%;
+  }
+  .login-Google-Button {
+    font-size: 14px;
+    width: 42%;
+  }
+}

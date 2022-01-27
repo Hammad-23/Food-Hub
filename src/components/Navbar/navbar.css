@@ -39,97 +39,17 @@ input {
   transition: all.6s;
 }
 
-.icons-Main-Row {
-  height: 60px;
-  box-shadow: whitesmoke 5px 5px 5px 5px;
-}
-.icon-Main-Col {
-  display: flex;
-  justify-content: flex-end;
-}
-.icons-Main-Div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 30%;
-}
-.search-Icon-Div {
-  padding-left: 10px;
-}
-.search-Input-Main-Div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 15px;
-}
-.search-Input-Main-Div:hover {
-  background-color: #f2f3f3;
-  transition: all.5s;
-}
-.search-Input-Div {
-  padding-left: 6px;
-}
-.search-Input {
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: none;
-  color: black;
-  font-weight: 500;
-  font-size: 18px;
-  outline: none;
-  height: 50px;
-  background-color: transparent;
-}
-.offer-Text-Div {
-  height: 40px;
-  width: 27%;
-  border-radius: 30px;
-  padding-top: 5px;
-}
-.offer-Text-Div:hover {
-  background-color: #f2f3f3;
-  transition: all.5s;
-}
-.offer-Text {
-  font-size: 18px;
-  font-weight: 600;
-  color: #5e5e5e;
-}
-.user-Icon-Div {
-  width: 15%;
-  margin-top: 5px;
-  height: 37px;
-  border-radius: 15px;
-}
-.user-Icon-Div:hover {
-  background-color: #f2f3f3;
-  transition: all.5s;
-}
-.cart-Div {
-  height: 40px;
-  width: 15%;
-  border-radius: 27px;
-  padding-top: 5px;
-}
-.cart-Div:hover {
-  background-color: #f2f3f3;
-  transition: all.5s;
-}
-
 @media screen and (max-width: 600px) {
   .main-row {
-    height: 74px;
+    height: 75px;
   }
-  .icons-Main-Div {
-    display: block;
-    justify-content: block;
+  .hub-Food-Heading {
+    font-size: 24px;
   }
-  .icons-Main-Div {
-    width: 100%;
-    display: flex;
+  .deliver-Text {
+    font-size: 16px;
   }
-  .search-Input-Main-Div {
-    width: 65%;
+  .noth-Naz-Text {
+    font-size: 14px;
   }
 }
