@@ -1,24 +1,13 @@
 import React, { useState } from "react";
 import "./home.css";
-import { Col, Row, Container } from "react-bootstrap";
-
-
+import Navbar from "../../components/Navbar/navbar";
+import Cart from "../../cart/cart";
+import Burger from '../../asset/images/burger.jpg'
 export default function Home() {
-  
-
   return (
     <>
-
-   <Row>
-    <h1>Home Page</h1>
-    </Row>
-
-    
-      
-      
-      
-      
-    
+      <Navbar />
+     
     </>
   );
 }
