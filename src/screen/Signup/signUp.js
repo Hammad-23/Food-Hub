@@ -13,8 +13,8 @@ export default function SignUp() {
       <Container>
         <Row className="sign-Up-Main-Col">
           <Col
-            xs={12}
-            sm={12}
+            xs={11}
+            sm={11}
             md={12}
             lg={4}
             xl={4}

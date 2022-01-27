@@ -16,7 +16,7 @@ input {
   justify-content: center;
   align-items: center;
   margin-right: 12px;
-  width: 30%;
+  width: 40%;
 }
 .search-Icon-Div {
   padding-left: 10px;
@@ -86,7 +86,7 @@ input {
   .icons-Main-Div {
     display: block;
     justify-content: block;
-    width: 100%;
+    /* width: 0; */
     display: flex;
   }
   .search-Input-Main-Div {

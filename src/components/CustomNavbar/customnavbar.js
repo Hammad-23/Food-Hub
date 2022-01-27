@@ -12,7 +12,7 @@ export default function Customnavbar(props) {
   return (
     <>
       <Row className="icons-Main-Row">
-        <Col className="icon-Main-Col" xs={12} sm={12} md={12} lg={12} xl={12}>
+        <Col className="icon-Main-Col" xs={12} sm={12} md={10} lg={12} xl={12}>
           <div className="icons-Main-Div">
             <div
               onClick={() => {

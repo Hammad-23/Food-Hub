@@ -86,8 +86,8 @@ export default function Home() {
           ></Col>
           <Col
             className="all-Day-Break-Text-Col"
-            xs={12}
-            sm={12}
+            xs={9}
+            sm={9}
             md={12}
             lg={8}
             xl={8}
@@ -95,8 +95,8 @@ export default function Home() {
             <p className="all-Day-BreakFast-Text">All day breakfast</p>
           </Col>
         </Row>
-        <Row style={{ display: "flex" }}>
-          <Col xs={12} sm={12} md={12} lg={2} xl={2}>
+        <Row>
+          <Col xs={6} sm={6} md={3} lg={2} xl={2}>
             <p className="categorie-List-Text">All day breakfast</p>
             <p className="categorie-List-Text">biryani</p>
             <p className="categorie-List-Text">Sandwiches</p>
@@ -110,7 +110,7 @@ export default function Home() {
             <p className="categorie-List-Text">accompaniments</p>
           </Col>
 
-          <Col>
+          <Col xs={12} sm={12} md={9} lg={2} xl={10}>
             <Row>
               {cardData.map((item) => {
                 return (
