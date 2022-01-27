@@ -9,9 +9,118 @@ import Burger from "../../asset/images/burger.jpg";
 import Button from "../../components/customButton/button";
 import Filter from "../../asset/images/filter.png";
 import Customnavbar from "../../components/CustomNavbar/customnavbar";
+import Footer from "../../components/footer/footer";
 
 export default function Home() {
   const cardData = [
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
+    {
+      source: Burger,
+      text: "veg . continental",
+      price: "1500",
+      title: "cheez burger",
+    },
     {
       source: Burger,
       text: "veg . continental",
@@ -96,7 +205,7 @@ export default function Home() {
           </Col>
         </Row>
         <Row style={{ display: "flex" }}>
-          <Col xs={12} sm={12} md={12} lg={2} xl={2}>
+          <Col xs={5} sm={12} md={10} lg={2} xl={2}>
             <p className="categorie-List-Text">All day breakfast</p>
             <p className="categorie-List-Text">biryani</p>
             <p className="categorie-List-Text">Sandwiches</p>
@@ -126,6 +235,7 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
+      <Footer/>
     </>
   );
 }
