@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { FaFacebookF } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
@@ -6,9 +6,24 @@ import { useHistory } from "react-router-dom";
 import "./login.css";
 import Button from "../../components/customButton/button";
 import Input from "../../components/Input/input";
+import { loginUser } from "../../config/firebase";
 
 export default function Login(props) {
   let history = useHistory();
+  const [fields, setFields] = useState({
+    email: "",
+    password: "",
+  });
+  const onhandleChange = (name, val) => {
+    setFields({ ...fields, [name]: val });
+  };
+  const logIn = () => {
+    if (fields.email === "" || fields.password === "") {
+      alert("Fields Required");
+    } else {
+      loginUser(fields, history);
+    }
+  };
   return (
     <>
       <Container>
@@ -51,6 +66,7 @@ export default function Login(props) {
                   type="email"
                   className="login-Input"
                   placeholder="Email ID /Mobile Number"
+                  onChange={(e) => onhandleChange("email", e.target.value)}
                 />
               </div>
               <div style={{ marginTop: "15px" }}>
@@ -58,10 +74,15 @@ export default function Login(props) {
                   type="password"
                   className="login-Input"
                   placeholder="Password :"
+                  onChange={(e) => onhandleChange("password", e.target.value)}
                 />
               </div>
               <div className="send-Button">
-                <Button className="login-Button" Text="Login" />
+                <Button
+                  onClick={() => logIn()}
+                  className="login-Button"
+                  Text="Login"
+                />
               </div>
               <div className="login-Line-DIV">
                 <div className="line"></div>
