@@ -394,6 +394,9 @@
      padding-left:5px;
 
  }
+ .categories>ul>li>a:hover{
+     color: #fff;
+ }
  .cuisines{
      font-family: sans-serif;
  }
@@ -425,6 +428,9 @@
     /* padding-left: 25px */
     text-align: center;
  }
+ .cuisines>ul>li>a:hover{
+     color: #fff;
+ }
  .otherDishes>ul{
     padding: 0;
     margin:0;
@@ -443,10 +449,12 @@
    font-size:11px;
    color:#949494;
 }
+.otherDishes>ul>li>a:hover{
+    color: #fff;
+}
 @media only screen and (max-width:576px){
     .categories>h6{
         font-size: 19px;
-        /* text-align: center; */
     }
     .categories>ul{
         text-align: center;
