@@ -2,6 +2,7 @@ import React from "react";
 import "./navbar.css";
 import { Row, Col } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
+import Colors from '../../utils/appColor';
 
 export default function Navbar(props) {
   var history = useHistory();

@@ -41,12 +41,13 @@ figure {
 .titleCard {
   margin-bottom: 7px;
   text-align: left;
-  margin-right: 5px;
 }
 .titleCard > span {
   cursor: pointer;
   text-transform: capitalize;
   color: #545352;
+  margin-left: 5px;
+
 }
 .prizeCard {
   text-align: left;

@@ -1,3 +1,4 @@
+
 p,
 input {
   font-family: sans-serif;
@@ -22,7 +23,7 @@ input {
   font-size: 18px;
 }
 .noth-Naz-Text {
-  color: #e96b3b;
+  color: #4a4a48;
   padding-top: 3px;
   padding-left: 4px;
 }
@@ -35,7 +36,7 @@ input {
   color: #5f5f5f;
 }
 .download-App-Text:hover {
-  color: #e96b3b;
+  color:  #e96b3b;
   transition: all.6s;
 }
 
