@@ -33,12 +33,15 @@ async function registerUser(fields, history) {
     alert(e.message);
   }
 }
-
+var userId = "";
 async function loginUser(fields, history) {
   try {
     await firebase
       .auth()
       .signInWithEmailAndPassword(fields.email, fields.password);
+    userId = firebase.auth().currentUser.uid;
+    JSON.stringify(localStorage.setItem("UserID", userId));
+    console.log("logged in user id --> ", userId);
     alert("User LoggedIn Successfully");
     history.push("/");
   } catch (e) {
@@ -46,4 +49,18 @@ async function loginUser(fields, history) {
   }
 }
 
-export { registerUser, loginUser };
+async function getUser(id) {
+ 
+  await db.collection("Users").doc(id).get()
+  .then(snapshot=>{
+    console.log("data from db--> ",snapshot.data())
+    const userDetails=snapshot.data()
+    localStorage.setItem("UserInfo",userDetails.firstName)
+  }).catch((e)=>{
+    console.log("error on db get--> ",e.message)
+  })
+  
+
+}
+
+export { registerUser, loginUser, getUser };

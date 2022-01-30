@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
@@ -9,6 +9,7 @@ import Burger from "../../asset/images/burger.jpg";
 import Button from "../../components/customButton/button";
 import Filter from "../../asset/images/filter.png";
 import Customnavbar from "../../components/CustomNavbar/customnavbar";
+import { getUser } from "../../config/firebase";
 
 export default function Home() {
   const cardData = [
@@ -49,6 +50,21 @@ export default function Home() {
       title: "cheez burger",
     },
   ];
+  const [user, setUser] = useState("");
+  const [isUser, setIsUser] = useState(false);
+
+  useEffect(() => {
+    const id = localStorage.getItem("UserID");
+
+    if (id) {
+      getUser(id);
+      const userDetails = localStorage.getItem("UserInfo");
+      setUser(userDetails);
+      console.log("login user name : ",userDetails)
+    } else {
+      isUser(false);
+    }
+  }, []);
   return (
     <>
       <Navbar />
