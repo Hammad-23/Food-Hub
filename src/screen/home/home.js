@@ -10,6 +10,7 @@ import Button from "../../components/customButton/button";
 import Filter from "../../asset/images/filter.png";
 import Customnavbar from "../../components/CustomNavbar/customnavbar";
 import { getUser } from "../../config/firebase";
+import { getAllproducts } from "../../config/firebase";
 import Footer from "../../components/footer/footer";
 
 export default function Home() {
@@ -173,6 +174,10 @@ export default function Home() {
     } else {
       setIsUser(false);
     }
+
+    const products=getAllproducts()
+    // console.log(products)
+
   }, []);
   return (
     <>

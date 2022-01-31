@@ -50,17 +50,35 @@ async function loginUser(fields, history) {
 }
 
 async function getUser(id) {
- 
-  await db.collection("Users").doc(id).get()
-  .then(snapshot=>{
-    console.log("data from db--> ",snapshot.data())
-    const userDetails=snapshot.data()
-    localStorage.setItem("UserInfo",userDetails.firstName)
-  }).catch((e)=>{
-    console.log("error on db get--> ",e.message)
-  })
-  
-
+  await db
+    .collection("Users")
+    .doc(id)
+    .get()
+    .then((snapshot) => {
+      console.log("data from db--> ", snapshot.data());
+      const userDetails = snapshot.data();
+      localStorage.setItem("UserInfo", userDetails.firstName);
+    })
+    .catch((e) => {
+      console.log("error on db get--> ", e.message);
+    });
 }
 
-export { registerUser, loginUser, getUser };
+async function getAllproducts() {
+  return await db
+    .collection("Products")
+    .get()
+    .then((snapshot) => {
+      const allProducts = [];
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        allProducts.push(data);
+      });
+      console.log("products array--> ", allProducts);
+    })
+    .catch((e) => {
+      console.log("products error--> ", e.message);
+    });
+}
+
+export { registerUser, loginUser, getUser, getAllproducts };
