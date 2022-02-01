@@ -5,10 +5,10 @@ import { GoSearch } from "react-icons/go";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BiCart } from "react-icons/bi";
 import { useHistory } from "react-router-dom";
+import Drawer from '../../components/drawer/drawer'
 
 export default function Customnavbar(props) {
   var history = useHistory();
-
   return (
     <>
       <Row className="icons-Main-Row">
@@ -36,11 +36,9 @@ export default function Customnavbar(props) {
                   history.push("/login");
                 }}
                 size={25}
-              />
+                />
             </div>
-            <div className="cart-Div">
-              <BiCart size={25} />
-            </div>
+            <Drawer/>
           </div>
         </Col>
       </Row>

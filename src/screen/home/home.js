@@ -10,6 +10,7 @@ import Button from "../../components/customButton/button";
 import Filter from "../../asset/images/filter.png";
 import Customnavbar from "../../components/CustomNavbar/customnavbar";
 import Footer from "../../components/footer/footer";
+import Drawer from '../../components/drawer/drawer'
 
 export default function Home() {
   const cardData = [
@@ -160,8 +161,9 @@ export default function Home() {
   ];
   return (
     <>
+    {/* <Drawer/> */}
       <Navbar />
-      <Customnavbar />
+      <Customnavbar /> 
       <Silder />
       <Container>
         <Row id="categorie-Main-Row">

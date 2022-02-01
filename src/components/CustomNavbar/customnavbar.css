@@ -70,6 +70,7 @@ input {
 .user-Icon-Div:hover {
   background-color: #f2f3f3;
   transition: all.5s;
+  cursor: pointer;
 }
 .cart-Div {
   height: 40px;
