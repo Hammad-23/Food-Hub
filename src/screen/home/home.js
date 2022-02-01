@@ -58,9 +58,7 @@ export default function Home() {
   }, []);
   return (
     <>
-      <Navbar />
-      <Customnavbar /> 
-      <Silder />
+      <Navbar/>
       <Customnavbar />
       <Silder src={BbqImage} srcTwo={PizzaImage} srcThree={RollImage} />
       <Container>

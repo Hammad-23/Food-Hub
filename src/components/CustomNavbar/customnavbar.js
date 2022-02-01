@@ -5,6 +5,7 @@ import { GoSearch } from "react-icons/go";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BiCart } from "react-icons/bi";
 import { useHistory } from "react-router-dom";
+import Drawer from '../../components/drawer/drawer';
 // import { Navbar } from "../Navbar/navbar"
 export default function Customnavbar(props) {
   var history = useHistory();

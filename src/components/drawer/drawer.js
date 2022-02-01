@@ -120,8 +120,7 @@ itemPrice:'Rs 299'
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      {/* <Divider/> */}
-       <Row>
+        <Row>
             <Col>
             <div className='cardHeader'>
                 <span>your cart</span>
@@ -197,27 +196,23 @@ itemPrice:'Rs 299'
             return(
               <>
                <Row>
-          <Col xl={5} lg={5}md={5}sm={5}xs={5} style={{border:'solid none'}}>
+          <Col xl={5} lg={5}md={5}sm={5}xs={5}>
           <div className='suggestionImage'>
             <img src={item.suggestImage} width={'70px'} height={'70px'}/>
           </div>
           </Col>
-          <Col style={{border:'solid none'}}>
+          <Col>
           <div className='suggestionItem'>
             <p>{item.suggestItem}</p>
           </div>
-          
-            <Col style={{border:'solid none'}}>
+            <Col>
           <div className='suggestionPriceNBtn'>
             <div className='suggestionPrice'>
             <span>{item.suggestPrice}</span>
             </div>
-        
-          
           <CustomButton Text='add' className='addSuggestionBtn'/>
           </div>
           </Col>
-          
           </Col>
         </Row>
               </>
