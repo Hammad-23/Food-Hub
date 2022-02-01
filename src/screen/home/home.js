@@ -1,170 +1,68 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./home.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import Navbar from "../../components/Navbar/navbar";
 import Silder from "../../components/Slider/index";
-import Card from "../../components/cart/cart";
-import Burger from "../../asset/images/burger.jpg";
 import Button from "../../components/customButton/button";
 import Filter from "../../asset/images/filter.png";
 import Customnavbar from "../../components/CustomNavbar/customnavbar";
+import { getUser } from "../../config/firebase";
+// import { getAllproducts } from "../../config/firebase";
 import Footer from "../../components/footer/footer";
 import Drawer from '../../components/drawer/drawer'
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../store/actions/products";
+import Card from "../../components/cart/cart";
+import Burger from "../../asset/images/burger.jpg";
+import RollParatha from "../../asset/images/rollParatha.jpg";
+import Cheezburger from "../../asset/images/cheezburger.JPG";
+import { useHistory } from "react-router-dom";
+import BbqImage from "../../asset/images/picOne.PNG";
+import PizzaImage from "../../asset/images/picTwo.PNG";
+import RollImage from "../../asset/images/picThree.PNG";
 
 export default function Home() {
+  let history = useHistory();
+  const dispatch = useDispatch();
+  const allproduct = useSelector((state) => state.allProductReducer);
+
   const cardData = [
     {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
+      // source: Burger,
+      // text: "veg . continental",
+      productPrice: "1500",
+      productName: "cheez burger",
     },
   ];
+  const [user, setUser] = useState("");
+  const [isUser, setIsUser] = useState(false);
+  console.log("all products in home--> ", allproduct.product);
+  cardData.push(...allproduct.product);
+  console.log("card data--> ", cardData);
+
+  useEffect(() => {
+    dispatch(getProducts());
+
+    const id = localStorage.getItem("UserID");
+
+    if (id) {
+      getUser(id);
+      const userDetails = localStorage.getItem("UserInfo");
+
+      setUser(userDetails);
+      console.log("login user name : ", userDetails);
+    } else {
+      setIsUser(false);
+    }
+  }, []);
   return (
     <>
-    {/* <Drawer/> */}
       <Navbar />
       <Customnavbar /> 
       <Silder />
+      <Customnavbar />
+      <Silder src={BbqImage} srcTwo={PizzaImage} srcThree={RollImage} />
       <Container>
         <Row id="categorie-Main-Row">
           <Col
@@ -185,7 +83,14 @@ export default function Home() {
               icon={<HiOutlineMenuAlt2 color="#ee825c" />}
             />
             <img className="filter-Image" src={Filter} />
-            <p className="filters-Text">FILTERS</p>
+            <p
+              onClick={() => {
+                history.push("/checkout");
+              }}
+              className="filters-Text"
+            >
+              FILTERS
+            </p>
           </Col>
           <Col
             className="categorie-Line-Col"
@@ -197,8 +102,8 @@ export default function Home() {
           ></Col>
           <Col
             className="all-Day-Break-Text-Col"
-            xs={12}
-            sm={12}
+            xs={9}
+            sm={9}
             md={12}
             lg={8}
             xl={8}
@@ -206,8 +111,8 @@ export default function Home() {
             <p className="all-Day-BreakFast-Text">All day breakfast</p>
           </Col>
         </Row>
-        <Row style={{ display: "flex" }}>
-          <Col xs={5} sm={12} md={10} lg={2} xl={2}>
+        <Row>
+          <Col xs={6} sm={6} md={3} lg={2} xl={2}>
             <p className="categorie-List-Text">All day breakfast</p>
             <p className="categorie-List-Text">biryani</p>
             <p className="categorie-List-Text">Sandwiches</p>
@@ -221,15 +126,15 @@ export default function Home() {
             <p className="categorie-List-Text">accompaniments</p>
           </Col>
 
-          <Col>
+          <Col xs={12} sm={12} md={9} lg={2} xl={10}>
             <Row>
               {cardData.map((item) => {
                 return (
                   <Card
-                    source={item.source}
+                    source={Burger}
                     text={item.text}
-                    title={item.title}
-                    price={item.price}
+                    title={item.productName}
+                    price={item.productPrice}
                   />
                 );
               })}
@@ -237,7 +142,7 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-      <Footer/>
+      <Footer />
     </>
   );
 }

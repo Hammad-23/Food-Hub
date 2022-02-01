@@ -1,6 +1,7 @@
 import firebase from "firebase";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import swal from "sweetalert";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAV76j06O46kjGzxxtuxtl9dcJjkSQe1MA",
@@ -27,23 +28,75 @@ async function registerUser(fields, history) {
       .auth()
       .createUserWithEmailAndPassword(fields.email, fields.password);
     db.collection("Users").doc(user.user.uid).set(rest);
-    alert("User Registered Successfully");
+    swal({
+      title: "User Registered Successfully",
+      icon: "success",
+      button: "Ok",
+    });
     history.push("/login");
   } catch (e) {
-    alert(e.message);
+    swal({
+      title: e.message,
+      icon: "error",
+      button: "Ok",
+    });
   }
 }
-
+var userId = "";
 async function loginUser(fields, history) {
   try {
     await firebase
       .auth()
       .signInWithEmailAndPassword(fields.email, fields.password);
-    alert("User LoggedIn Successfully");
+    userId = firebase.auth().currentUser.uid;
+    JSON.stringify(localStorage.setItem("UserID", userId));
+    console.log("logged in user id --> ", userId);
+    // alert("User LoggedIn Successfully");
+    swal({
+      title: "User LoggedIn Successfully",
+      icon: "success",
+      button: "Ok",
+    });
     history.push("/");
   } catch (e) {
-    alert(e.message);
+    swal({
+      title: e.message,
+      icon: "error",
+      button: "Ok",
+    });
   }
 }
 
-export { registerUser, loginUser };
+async function getUser(id) {
+  await db
+    .collection("Users")
+    .doc(id)
+    .get()
+    .then((snapshot) => {
+      console.log("data from db--> ", snapshot.data());
+      const userDetails = snapshot.data();
+      localStorage.setItem("UserInfo", userDetails.firstName);
+    })
+    .catch((e) => {
+      console.log("error on db get--> ", e.message);
+    });
+}
+
+async function getAllproducts() {
+  return await db
+    .collection("Products")
+    .get()
+    .then((snapshot) => {
+      const allProducts = [];
+      snapshot.forEach((doc) => {
+        const data = doc.data();
+        allProducts.push(data);
+      });
+      // console.log("products array--> ", allProducts);
+    })
+    .catch((e) => {
+      // console.log("products error--> ", e.message);
+    });
+}
+
+export { registerUser, loginUser, getUser, getAllproducts };

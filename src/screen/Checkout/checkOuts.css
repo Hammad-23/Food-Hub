@@ -1,0 +1,165 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label {
+  font-family: sans-serif;
+}
+#check-out-Card-Main-Row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 25px;
+}
+.login-Signin-Card-Main-Div {
+  border: solid 2px whitesmoke;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 300px;
+  margin-bottom: 24px;
+}
+.login-SignUp-Text-Col {
+  display: flex;
+  align-items: center;
+}
+.login-Signup-Text {
+  padding-top: 10px;
+  text-transform: capitalize;
+  font-weight: 600;
+  color: #867684;
+}
+.email-Input-Col {
+  margin-top: 35px;
+  height: 150px;
+}
+.email-Input {
+  padding-left: 10px;
+  border: 2px solid #e7e9e9;
+  outline: none;
+  color: #c2b4bb;
+  width: 90%;
+  height: 40px;
+}
+.email-Input:hover {
+  border: 2px solid #fbb100;
+}
+.btn-Dont-Have-Text-Col {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  /* margin-bottom: 10px; */
+  margin-top: 15px;
+}
+.send-OPT-Button {
+  background-image: linear-gradient(to right, #e8b984, #f04602);
+  color: #eee;
+  width: 27%;
+  height: 40px;
+  border-radius: 15px;
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+.dont-Have-Acc-Text {
+  padding-top: 15px;
+  text-transform: capitalize;
+  color: #c2b4bb;
+}
+#sign-Up-Text {
+  color: #f04602;
+}
+#facebook-Button {
+  background-color: transparent;
+  border: solid 2px #4f73bb;
+  width: 90%;
+  height: 35px;
+  margin-bottom: 15px;
+  /* margin-top: 30px; */
+}
+#facebook-Button:hover {
+  background-color: #4f73bb;
+  color: white;
+  transition: all.4s;
+}
+#face-Icon:hover {
+  color: white;
+}
+#google-Icon-Col {
+  display: flex;
+  height: 35px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+}
+.contiune-As-Button {
+  background-image: linear-gradient(to right, #e8b984, #f04602);
+  width: 90%;
+  height: 35px;
+  color: white;
+  border-radius: 12px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+.deliver-Card-Main-Col {
+  /* border: solid red; */
+  /* box-shadow: whitesmoke 5px 5px 5px 10px; */
+  height: 150px;
+  border: solid 2px whitesmoke;
+}
+#deliver-Text {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #867684;
+}
+.deliver-Text-Col {
+  text-align: left;
+  margin-bottom: 30px;
+}
+#scheduled-Your-Order-Text-Col {
+  text-align: left;
+}
+.scheduled-Text {
+  color: #867684;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 3px;
+}
+#your-Order-Text {
+  font-size: 14px;
+}
+#time-Text {
+  font-weight: 600;
+  font-size: 15px;
+}
+.location-Icon-Dellvery-Text-Col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: solid 2px whitesmoke;
+  height: 90px;
+  margin-bottom: 24px;
+  cursor: not-allowed;
+}
+.dellvery-Address-Text {
+  padding-left: 15px;
+  color: #867684;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+#you-Mlight-Card-Main-Col{
+    height: 250px;
+}
+.french-Onion-Text{
+    color: #867684;
+    font-size: 15px;
+    text-transform: capitalize;
+    font-weight: 600;
+}

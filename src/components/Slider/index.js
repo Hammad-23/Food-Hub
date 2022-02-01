@@ -1,10 +1,7 @@
 import React from "react";
 import "./index.css";
 import { Row, Col, Carousel, Container } from "react-bootstrap";
-import BbqImage from "../../asset/images/picOne.PNG";
-import PizzaImage from "../../asset/images/picTwo.PNG";
-import RollImage from "../../asset/images/picThree.PNG";
-export default function Sliders() {
+export default function Sliders(props) {
   return (
     <>
       <Row className="slider-Row">
@@ -14,21 +11,24 @@ export default function Sliders() {
               <Carousel.Item>
                 <img
                   className="d-block w-100 slider-Image"
-                  src={BbqImage}
+                  src={props.src}
+                  style={{width:props.width,height:props.height}}
                   alt="First slide"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
+                style={{width:props.width,height:props.height}}
                   className="d-block w-100 slider-Image"
-                  src={PizzaImage}
+                  src={props.srcTwo}
                   alt="Second slide"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
+                style={{width:props.width,height:props.height}}
                   className="d-block w-100 slider-Image"
-                  src={RollImage}
+                  src={props.srcThree}
                   alt="Third slide"
                 />
               </Carousel.Item>
