@@ -4,7 +4,7 @@ import Home from "../screen/home/home";
 import Login from "../screen/Login/login";
 import SignUp from "../screen/Signup/signUp";
 import Searchbar from "../components/SearchBar/searchbar";
-
+import CheckOut from "../screen/Checkout/checkOuts";
 export default function App() {
   return (
     <Router>
@@ -23,6 +23,9 @@ export default function App() {
           </Route>
           <Route exact path="/searchbar">
             <Searchbar/>
+          </Route>
+          <Route exact path="/checkout">
+            <CheckOut/>
           </Route>
         </Switch>
       </div>

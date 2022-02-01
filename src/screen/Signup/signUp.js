@@ -7,7 +7,7 @@ import { FcGoogle } from "react-icons/fc";
 import Input from "../../components/Input/input";
 import { Row, Col, Container } from "react-bootstrap";
 import { registerUser } from "../../config/firebase";
-
+import swal from 'sweetalert';
 export default function SignUp() {
   const [fields, setFields] = useState({
     firstName: "",
@@ -25,8 +25,14 @@ export default function SignUp() {
       fields.firstName === "" ||
       fields.email === "" ||
       fields.password === ""
-    ) {
-      alert("Fields Required");
+    ) {swal({
+      title: "Fields Required",
+      // text: "You clicked the button!",
+      icon: "success",
+      button: "Yes",
+      button: "No",
+    });
+      // alert("Fields Required");
     } else {
       registerUser(fields, history);
     }

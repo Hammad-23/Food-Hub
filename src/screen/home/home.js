@@ -4,16 +4,23 @@ import { Row, Col, Container } from "react-bootstrap";
 import { HiOutlineMenuAlt2 } from "react-icons/hi";
 import Navbar from "../../components/Navbar/navbar";
 import Silder from "../../components/Slider/index";
-import Card from "../../components/cart/cart";
-import Burger from "../../asset/images/burger.jpg";
 import Button from "../../components/customButton/button";
 import Filter from "../../asset/images/filter.png";
 import Customnavbar from "../../components/CustomNavbar/customnavbar";
+import Card from "../../components/cart/cart";
+import Burger from "../../asset/images/burger.jpg";
+import RollParatha from "../../asset/images/rollParatha.jpg";
+import Cheezburger from "../../asset/images/cheezburger.JPG";
+import { useHistory } from "react-router-dom";
+import BbqImage from "../../asset/images/picOne.PNG";
+import PizzaImage from "../../asset/images/picTwo.PNG";
+import RollImage from "../../asset/images/picThree.PNG";
 
-export default function Home() {
+export default function Home(props) {
+  let history = useHistory();
   const cardData = [
     {
-      source: Burger,
+      source: RollParatha,
       text: "veg . continental",
       price: "1500",
       title: "cheez burger",
@@ -25,7 +32,7 @@ export default function Home() {
       title: "cheez burger",
     },
     {
-      source: Burger,
+      source: Cheezburger,
       text: "veg . continental",
       price: "1500",
       title: "cheez burger",
@@ -53,7 +60,7 @@ export default function Home() {
     <>
       <Navbar />
       <Customnavbar />
-      <Silder />
+      <Silder src={BbqImage} srcTwo={PizzaImage} srcThree={RollImage} />
       <Container>
         <Row id="categorie-Main-Row">
           <Col
@@ -74,7 +81,14 @@ export default function Home() {
               icon={<HiOutlineMenuAlt2 color="#ee825c" />}
             />
             <img className="filter-Image" src={Filter} />
-            <p className="filters-Text">FILTERS</p>
+            <p
+              onClick={() => {
+                history.push("/checkout");
+              }}
+              className="filters-Text"
+            >
+              FILTERS
+            </p>
           </Col>
           <Col
             className="categorie-Line-Col"

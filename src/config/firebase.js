@@ -1,6 +1,7 @@
 import firebase from "firebase";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import swal from "sweetalert";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAV76j06O46kjGzxxtuxtl9dcJjkSQe1MA",
@@ -27,10 +28,18 @@ async function registerUser(fields, history) {
       .auth()
       .createUserWithEmailAndPassword(fields.email, fields.password);
     db.collection("Users").doc(user.user.uid).set(rest);
-    alert("User Registered Successfully");
+    swal({
+      title: "User Registered Successfully",
+      icon: "success",
+      button: "Ok",
+    });
     history.push("/login");
   } catch (e) {
-    alert(e.message);
+    swal({
+      title: e.message,
+      icon: "error",
+      button: "Ok",
+    });
   }
 }
 
@@ -39,10 +48,18 @@ async function loginUser(fields, history) {
     await firebase
       .auth()
       .signInWithEmailAndPassword(fields.email, fields.password);
-    alert("User LoggedIn Successfully");
+    swal({
+      title: "User LoggedIn Successfully",
+      icon: "success",
+      button: "Ok",
+    });
     history.push("/");
   } catch (e) {
-    alert(e.message);
+    swal({
+      title: e.message,
+      icon: "error",
+      button: "Ok",
+    });
   }
 }
 
