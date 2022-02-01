@@ -10,174 +10,42 @@ import Button from "../../components/customButton/button";
 import Filter from "../../asset/images/filter.png";
 import Customnavbar from "../../components/CustomNavbar/customnavbar";
 import { getUser } from "../../config/firebase";
-import { getAllproducts } from "../../config/firebase";
+// import { getAllproducts } from "../../config/firebase";
 import Footer from "../../components/footer/footer";
+import { useDispatch, useSelector } from "react-redux";
+import { getProducts } from "../../store/actions/products";
 
 export default function Home() {
+  const dispatch = useDispatch();
+  const allproduct = useSelector((state) => state.allProductReducer);
+
   const cardData = [
     {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
-    },
-    {
-      source: Burger,
-      text: "veg . continental",
-      price: "1500",
-      title: "cheez burger",
+      // source: Burger,
+      // text: "veg . continental",
+      productPrice: "1500",
+      productName: "cheez burger",
     },
   ];
   const [user, setUser] = useState("");
   const [isUser, setIsUser] = useState(false);
+  console.log("all products in home--> ", allproduct.product);
+  cardData.push(...allproduct.product);
+  console.log("card data--> ", cardData);
 
   useEffect(() => {
+    dispatch(getProducts());
+
     const id = localStorage.getItem("UserID");
 
     if (id) {
       getUser(id);
       const userDetails = localStorage.getItem("UserInfo");
       setUser(userDetails);
-      console.log("login user name : ",userDetails)
+      console.log("login user name : ", userDetails);
     } else {
       setIsUser(false);
     }
-
-    const products=getAllproducts()
-    // console.log(products)
-
   }, []);
   return (
     <>
@@ -245,10 +113,10 @@ export default function Home() {
               {cardData.map((item) => {
                 return (
                   <Card
-                    source={item.source}
+                    source={Burger}
                     text={item.text}
-                    title={item.title}
-                    price={item.price}
+                    title={item.productName}
+                    price={item.productPrice}
                   />
                 );
               })}
@@ -256,7 +124,7 @@ export default function Home() {
           </Col>
         </Row>
       </Container>
-      <Footer/>
+      <Footer />
     </>
   );
 }

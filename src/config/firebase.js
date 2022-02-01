@@ -17,7 +17,7 @@ firebase.initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
 const auth = firebase.auth();
-const db = firebase.firestore();
+ const db = firebase.firestore();
 // const user=firebase.user();
 
 async function registerUser(fields, history) {
@@ -74,10 +74,10 @@ async function getAllproducts() {
         const data = doc.data();
         allProducts.push(data);
       });
-      console.log("products array--> ", allProducts);
+      // console.log("products array--> ", allProducts);
     })
     .catch((e) => {
-      console.log("products error--> ", e.message);
+      // console.log("products error--> ", e.message);
     });
 }
 
