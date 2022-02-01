@@ -8,7 +8,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 70px;
+  height: 100px;
 }
 .hub-Food-Heading {
   font-size: 25px;
@@ -26,6 +26,16 @@ input {
   color: #4a4a48;
   padding-top: 3px;
   padding-left: 4px;
+}
+.drop-Down-User-Col{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.user-Name-Text {
+  font-size: 18px;
+  color: #e96b3b;
+  padding-top: 15px;
 }
 .download-App-Col {
   text-align: right;

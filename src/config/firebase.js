@@ -1,6 +1,7 @@
 import firebase from "firebase";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import swal from "sweetalert";
 
 const firebaseConfig = {
   apiKey: "AIzaSyAV76j06O46kjGzxxtuxtl9dcJjkSQe1MA",
@@ -17,7 +18,7 @@ firebase.initializeApp(firebaseConfig);
 // const analytics = getAnalytics(app);
 
 const auth = firebase.auth();
- const db = firebase.firestore();
+const db = firebase.firestore();
 // const user=firebase.user();
 
 async function registerUser(fields, history) {
@@ -27,10 +28,18 @@ async function registerUser(fields, history) {
       .auth()
       .createUserWithEmailAndPassword(fields.email, fields.password);
     db.collection("Users").doc(user.user.uid).set(rest);
-    alert("User Registered Successfully");
+    swal({
+      title: "User Registered Successfully",
+      icon: "success",
+      button: "Ok",
+    });
     history.push("/login");
   } catch (e) {
-    alert(e.message);
+    swal({
+      title: e.message,
+      icon: "error",
+      button: "Ok",
+    });
   }
 }
 var userId = "";
@@ -42,10 +51,19 @@ async function loginUser(fields, history) {
     userId = firebase.auth().currentUser.uid;
     JSON.stringify(localStorage.setItem("UserID", userId));
     console.log("logged in user id --> ", userId);
-    alert("User LoggedIn Successfully");
+    // alert("User LoggedIn Successfully");
+    swal({
+      title: "User LoggedIn Successfully",
+      icon: "success",
+      button: "Ok",
+    });
     history.push("/");
   } catch (e) {
-    alert(e.message);
+    swal({
+      title: e.message,
+      icon: "error",
+      button: "Ok",
+    });
   }
 }
 

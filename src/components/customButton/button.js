@@ -5,8 +5,8 @@ export default function Button(props) {
   return (
     // <div>
       <button {...props}>
-        {props.Text}
         {props.icon}
+        {props.Text}
       </button>
     // {/* </div> */}
   );

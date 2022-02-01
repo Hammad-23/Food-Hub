@@ -7,7 +7,7 @@ import "./login.css";
 import Button from "../../components/customButton/button";
 import Input from "../../components/Input/input";
 import { loginUser } from "../../config/firebase";
-
+import swal from "sweetalert";
 export default function Login(props) {
   let history = useHistory();
   const [fields, setFields] = useState({
@@ -19,7 +19,11 @@ export default function Login(props) {
   };
   const logIn = () => {
     if (fields.email === "" || fields.password === "") {
-      alert("Fields Required");
+      swal({
+        title: "Fields Required",
+        icon: "success",
+        button: "Ok",
+      });
     } else {
       loginUser(fields, history);
     }

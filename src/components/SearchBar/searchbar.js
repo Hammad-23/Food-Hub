@@ -37,6 +37,33 @@ export default function Searchbar() {
     {
       Text: "520 cal I Low Calorie",
     },
+    {
+      Text: "520 cal I Low Calorie",
+    },
+    {
+      Text: "797 cal I Calorie",
+    },
+    {
+      Text: "520 cal I Low Calorie",
+    },
+    {
+      Text: "797 cal I Calorie",
+    },
+    {
+      Text: "520 cal I Low Calorie",
+    },
+    {
+      Text: "797 cal I Calorie",
+    },
+    {
+      Text: "520 cal I Low Calorie",
+    },
+    {
+      Text: "797 cal I Calorie",
+    },
+    {
+      Text: "520 cal I Low Calorie",
+    },
   ];
   return (
     <>
@@ -51,7 +78,7 @@ export default function Searchbar() {
             xl={12}
             id="back-To-Menu-Main-Col"
           >
-            <Col id="bac-To-Menu-Col" xs={5} sm={5} md={12} lg={2} xl={2}>
+            <Col id="bac-To-Menu-Col" xs={5} sm={5} md={11} lg={2} xl={2}>
               <p
                 onClick={() => {
                   history.push("/");
@@ -70,7 +97,7 @@ export default function Searchbar() {
             xl={12}
             id="search-Icon-Input-Main-Col"
           >
-            <Col id="search-Input-COL" xs={11} sm={11} md={12} lg={11} xl={11}>
+            <Col id="search-Input-COL" xs={11} sm={11} md={11} lg={11} xl={11}>
               <GoSearch id="search-ICon" color="#5e5e5e" size={28} />
               <Input id="searchInput" placeholder="Search" />
               <p id="clear-Text">Clear</p>
@@ -97,7 +124,7 @@ export default function Searchbar() {
                 id="To-Categorie-Line-Col"
                 xs={6}
                 sm={6}
-                md={12}
+                md={8}
                 lg={10}
                 xl={10}
               ></Col>
@@ -110,7 +137,7 @@ export default function Searchbar() {
             {cardData.map((item) => {
               return (
                 <>
-                  <Col xs={12} sm={12} md={12} lg={4} xl={4}>
+                  <Col xs={12} sm={12} md={6} lg={4} xl={4}>
                     <Searchbox Text={item.Text} />
                   </Col>
                 </>

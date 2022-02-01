@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import "./customnavbar.css";
 import { Row, Col, Container } from "react-bootstrap";
 import { GoSearch } from "react-icons/go";
 import { AiOutlineUserAdd } from "react-icons/ai";
 import { BiCart } from "react-icons/bi";
 import { useHistory } from "react-router-dom";
-
+// import { Navbar } from "../Navbar/navbar"
 export default function Customnavbar(props) {
   var history = useHistory();
-
+  // const [user, setUser] = useState(false);
+  // console.log("--->>>>", user);
   return (
     <>
       <Row className="icons-Main-Row">
-        <Col className="icon-Main-Col" xs={12} sm={12} md={12} lg={12} xl={12}>
+        <Col className="icon-Main-Col" xs={12} sm={12} md={10} lg={12} xl={12}>
           <div className="icons-Main-Div">
             <div
               onClick={() => {
