@@ -10,7 +10,7 @@ import Customnavbar from "../../components/CustomNavbar/customnavbar";
 import { getUser } from "../../config/firebase";
 // import { getAllproducts } from "../../config/firebase";
 import Footer from "../../components/footer/footer";
-import Drawer from '../../components/drawer/drawer'
+import Drawer from "../../components/drawer/drawer";
 import { useDispatch, useSelector } from "react-redux";
 import { getProducts } from "../../store/actions/products";
 import Card from "../../components/cart/cart";
@@ -23,6 +23,8 @@ import PizzaImage from "../../asset/images/picTwo.PNG";
 import RollImage from "../../asset/images/picThree.PNG";
 
 export default function Home() {
+  const [user, setUser] = useState("");
+  const [isUser, setIsUser] = useState(false);
   let history = useHistory();
   const dispatch = useDispatch();
   const allproduct = useSelector((state) => state.allProductReducer);
@@ -35,8 +37,7 @@ export default function Home() {
       productName: "cheez burger",
     },
   ];
-  const [user, setUser] = useState("");
-  const [isUser, setIsUser] = useState(false);
+
   console.log("all products in home--> ", allproduct.product);
   cardData.push(...allproduct.product);
   console.log("card data--> ", cardData);
@@ -51,14 +52,17 @@ export default function Home() {
       const userDetails = localStorage.getItem("UserInfo");
 
       setUser(userDetails);
+
       console.log("login user name : ", userDetails);
+      setIsUser(true);
     } else {
       setIsUser(false);
     }
   }, []);
+
   return (
     <>
-      <Navbar/>
+      {isUser ? <Navbar setIsUser={setIsUser} userName={user} /> : ""}
       <Customnavbar />
       <Silder src={BbqImage} srcTwo={PizzaImage} srcThree={RollImage} />
       <Container>

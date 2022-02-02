@@ -67,7 +67,7 @@ export default function Searchbar() {
   ];
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Row id="search-Mein-Row">
         <Col xs={12} sm={12} md={12} lg={12} xl={12}>
           <Col
