@@ -12,13 +12,13 @@ export default function Sliders(props) {
                 <img
                   className="d-block w-100 slider-Image"
                   src={props.src}
-                  style={{width:props.width,height:props.height}}
+                  style={{ width: props.width, height: props.height }}
                   alt="First slide"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                style={{width:props.width,height:props.height}}
+                  style={{ width: props.width, height: props.height }}
                   className="d-block w-100 slider-Image"
                   src={props.srcTwo}
                   alt="Second slide"
@@ -26,7 +26,7 @@ export default function Sliders(props) {
               </Carousel.Item>
               <Carousel.Item>
                 <img
-                style={{width:props.width,height:props.height}}
+                  style={{ width: props.width, height: props.height }}
                   className="d-block w-100 slider-Image"
                   src={props.srcThree}
                   alt="Third slide"

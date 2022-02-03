@@ -22,10 +22,10 @@ export default function App() {
             <SignUp />
           </Route>
           <Route exact path="/searchbar">
-            <Searchbar/>
+            <Searchbar />
           </Route>
           <Route exact path="/checkout">
-            <CheckOut/>
+            <CheckOut />
           </Route>
         </Switch>
       </div>
