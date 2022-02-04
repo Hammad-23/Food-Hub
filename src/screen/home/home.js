@@ -21,12 +21,16 @@ import { useHistory } from "react-router-dom";
 import BbqImage from "../../asset/images/picOne.PNG";
 import PizzaImage from "../../asset/images/picTwo.PNG";
 import RollImage from "../../asset/images/picThree.PNG";
+import Products from "../../components/productDetails/productDetails";
 
-export default function Home() {
+export default function Home(props) {
   let history = useHistory();
+  const productDetails=(data)=>{
+    console.log(data)
+    history.push({pathname:"/productdetals", state:data})
+  }
   const dispatch = useDispatch();
   const allproduct = useSelector((state) => state.allProductReducer);
-
   const cardData = [
     {
       // source: Burger,
@@ -128,19 +132,21 @@ export default function Home() {
             <Row>
               {cardData.map((item) => {
                 return (
+                  <Col xxl={3} xl={4} lg={4} md={4} sm={6} xs={12} onClick={()=>productDetails(item)}>
                   <Card
                     source={Burger}
                     text={item.text}
                     title={item.productName}
                     price={item.productPrice}
                   />
+                  </Col>
                 );
               })}
             </Row>
           </Col>
         </Row>
       </Container>
-      <Footer />
+      <Footer/>
     </>
   );
 }

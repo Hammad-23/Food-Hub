@@ -2,11 +2,13 @@ import React from "react";
 import "./cart.css";
 import Button from "../customButton/button";
 import { Container, Row, Col } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 export default function Cart(props) {
+  let history= useHistory();
   return (
     <>
-      <Col xxl={3} xl={4} lg={4} md={4} sm={6} xs={12}>
+      
         <div className="boxCard">
           <Row>
             <Col>
@@ -20,7 +22,7 @@ export default function Cart(props) {
               <div className="boxImg">
                 <div className="zoomIn">
                   <figure>
-                    <img className="img-fluid img" src={props.source} />
+                    <img className="img-fluid img" src={props.source}/>
                   </figure>
                 </div>
               </div>
@@ -47,7 +49,7 @@ export default function Cart(props) {
             </Row>
           </div>
         </div>
-      </Col>
+      
     </>
   );
 }

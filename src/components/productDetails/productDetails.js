@@ -9,6 +9,7 @@ import { NavLink } from "react-router-dom";
 import Button from "../customButton/button";
 import Leg from "../../asset/images/chickenLeg.png"
 import RollParatha from "../../asset/images/rollParatha.jpg";
+import { useLocation } from "react-router-dom";
 
 export default function Products() {
   const [productItem, setProductItem] = useState([
@@ -36,7 +37,14 @@ export default function Products() {
       continentalName: "veg . continental",
       price: "$350",
     },
+    
   ]);
+  let location= useLocation()
+  const selectAllProducts={
+    itemImage:location.state.Burger,
+    itemName:location.state.productName,
+    itemPrice:location.state.productPrice
+  }
   return (
     <>
       <Container>
@@ -46,7 +54,7 @@ export default function Products() {
               <Row>
                 <Col>
                   <div className="productImage">
-                    <img className="img-fluid" src={RollParatha} />
+                    <img className="img-fluid" src={RollParatha}/>
                   </div>
                 </Col>
               </Row>
@@ -74,7 +82,7 @@ export default function Products() {
               <Row>
                 <Col>
                   <div className="productHeading">
-                    <p>All American Corn Sandwich</p>
+                    <p>{location.state.productName}</p>
                   </div>
                 </Col>
               </Row>
@@ -89,13 +97,13 @@ export default function Products() {
               <Row>
                 <Col>
                   <div className="productPrice">
-                    <p>₹195</p>
+                    <p>{location.state.productPrice}</p>
                   </div>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                  <Button text={"pre-order"} className="preOrderBtn" />
+                  <Button Text={"pre-order"} className="preOrderBtn" />
                   <p className="productbtnCustomise">Customisable</p>
                 </Col>
               </Row>
