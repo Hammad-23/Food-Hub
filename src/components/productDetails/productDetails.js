@@ -7,9 +7,10 @@ import { FaTwitterSquare } from "react-icons/fa";
 import { FaGooglePlusSquare } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import Button from "../customButton/button";
-import Leg from "../../asset/images/chickenLeg.png"
+import Leg from "../../asset/images/chickenLeg.png";
 import RollParatha from "../../asset/images/rollParatha.jpg";
 import { useLocation } from "react-router-dom";
+import Customnavbar from "../../components/CustomNavbar/customnavbar";
 
 export default function Products() {
   const [productItem, setProductItem] = useState([
@@ -37,16 +38,17 @@ export default function Products() {
       continentalName: "veg . continental",
       price: "$350",
     },
-    
   ]);
-  let location= useLocation()
-  const selectAllProducts={
-    itemImage:location.state.Burger,
-    itemName:location.state.productName,
-    itemPrice:location.state.productPrice
-  }
+  let location = useLocation();
+  const selectAllProducts = {
+    itemImage: location.state.Burger,
+    itemName: location.state.productName,
+    itemPrice: location.state.productPrice,
+    img: location.state.imgUrl,
+  };
   return (
     <>
+      <Customnavbar />
       <Container>
         <Row className="productBackground">
           <Col xl={6} lg={7} md={7} sm={12} xs={12}>
@@ -54,7 +56,7 @@ export default function Products() {
               <Row>
                 <Col>
                   <div className="productImage">
-                    <img className="img-fluid" src={RollParatha}/>
+                    <img className="img-fluid" src={location.state.imgUrl} />
                   </div>
                 </Col>
               </Row>

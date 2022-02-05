@@ -34,12 +34,12 @@ export default function Home() {
   const dispatch = useDispatch();
   const allproduct = useSelector((state) => state.allProductReducer);
   const cardData = [
-    {
-      // source: Burger,
-      // text: "veg . continental",
-      productPrice: "1500",
-      productName: "cheez burger",
-    },
+    // {
+    //   // source: Burger,
+    //   // text: "veg . continental",
+    //   productPrice: "1500",
+    //   productName: "cheez burger",
+    // },
   ];
 
   console.log("all products in home--> ", allproduct.product);
