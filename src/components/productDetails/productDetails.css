@@ -67,6 +67,7 @@
 }
 .productHeading>p{
     font-size:20px;
+    text-transform: capitalize;
 }
 .productContinental>a{
     color: #eb3b17;
