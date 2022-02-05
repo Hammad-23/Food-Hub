@@ -133,7 +133,7 @@ export default function Home() {
               {cardData.map((item) => {
                 return (
                   <Card
-                    source={Burger}
+                    source={item.imgUrl}
                     text={item.text}
                     title={item.productName}
                     price={item.productPrice}
