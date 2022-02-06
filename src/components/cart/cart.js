@@ -22,7 +22,10 @@ export default function Cart(props) {
               <div className="boxImg">
                 <div className="zoomIn">
                   <figure>
-                    <img className="img-fluid img" src={props.source}/>
+                    <img 
+                    className="img-fluid img"
+                     src={props.source}
+                     />
                   </figure>
                 </div>
               </div>

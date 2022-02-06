@@ -3,6 +3,9 @@
   justify-content: center;
   align-items: center;
   font-family: sans-serif;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
 }
 .textCard {
   padding: 10px;
@@ -16,18 +19,22 @@
 .boxImg {
   cursor: pointer;
 }
-.boxImg > img {
-  border-radius: 30px;
+.boxImg>.zoomIn{
+  margin-left: auto;
+  margin-right: auto;
 }
+
 figure {
   overflow: hidden;
   margin: 0 10px;
   border-radius: 15px;
-}
-.boxImg > img {
-  display: block;
-  width: 100px;
+  width: 260px;
   height: auto;
+}
+.boxImg>.zoomIn>figure>.img {
+  display: block;
+  width: 260px;
+  height: 160px;
   cursor: pointer;
 }
 .boxImg > .zoomIn > img {
@@ -67,8 +74,8 @@ figure {
   text-transform: uppercase;
   border-radius: 15px;
   outline: none;
-  width: 95px;
-  height: 30px;
+  width: 83px;
+  height: 27px;
   border: none;
 }
 .btnCustomise {

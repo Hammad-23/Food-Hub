@@ -132,11 +132,11 @@ export default function Home() {
             <p className="categorie-List-Text">accompaniments</p>
           </Col>
 
-          <Col xs={12} sm={12} md={9} lg={2} xl={10}>
+          <Col xs={12} sm={12} md={9} lg={10} xl={10}>
             <Row>
               {cardData.map((item) => {
                 return (
-                  <Col xxl={3} xl={4} lg={4} md={4} sm={6} xs={12} onClick={()=>productDetails(item)}>
+                  <Col xxl={3} xl={4} lg={4} md={6} sm={6} xs={12} onClick={()=>productDetails(item)}>
                   <Card
                     source={item.imgUrl}
                     text={item.text}
